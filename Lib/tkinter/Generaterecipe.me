@@ -1,0 +1,41 @@
+import random
+recipes =  ["Sausages and mash", "lasagna", "Honey soy chicken fried rice", "Beef Stirfry", "Chicken Curry"]
+choices = random.sample(recipes, 1)
+
+print (choices) 
+
+import random
+# I have created a list of different potential recipes that could be chosen from. 
+
+recipes = [
+    "Sausages and mash",
+    "lasagna",
+    "Honey soy chicken fried rice",
+    "Beef Stirfry",
+    "Chicken Curry"]
+
+# This is a dictionary map code that where each of the recipes are displayed with their corresponding ingredients needed to make
+
+ingredients_map = {
+    "Sausages and mash": ["sausages", "potatoes", "butter", "milk", "salt", "pepper"],
+ 
+   "lasagna": ["lasagna sheets", "ground beef", "tomato sauce", "ricotta", "mozzarella", "parmesan", "onion", "garlic"],
+
+    "Honey soy chicken fried rice": ["chicken", "rice", "soy sauce", "honey", "eggs", "peas", "carrot", "onion", "garlic"],
+
+    "Beef Stirfry": ["beef strips", "vegetables (e.g. peppers, broccoli)", "soy sauce", "ginger", "garlic", "oil"],
+
+    "Chicken Curry": ["chicken", "curry powder", "coconut milk", "onion", "garlic", "ginger", "tomato paste", "oil"]
+}
+
+# this is where the recipe is randomly selected from the list of different recipes 
+chosen_recipe = random.choice(recipes)
+
+
+# will display what the recipe is and the ingredients that are needed for that specific recipe 
+
+print(f"Today's recipe: {chosen_recipe}\n")
+print("Ingredients needed:")
+for ingredient in ingredients_map[chosen_recipe]:
+    print(f" - {ingredient}")
+
